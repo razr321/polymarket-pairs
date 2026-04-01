@@ -271,8 +271,8 @@ def chart_z_scores(pairs_df):
         marker_color=df['color'],
         text=df['last_z'].apply(lambda z: f"{z:.2f}"), textposition='outside',
     ))
-    fig.add_vline(x=2.0, line_dash="dash", line_color="#ff444488")
-    fig.add_vline(x=-2.0, line_dash="dash", line_color="#00ff8888")
+    fig.add_vline(x=2.0, line_dash="dash", line_color="rgba(255,68,68,0.5)")
+    fig.add_vline(x=-2.0, line_dash="dash", line_color="rgba(0,255,136,0.5)")
     fig.update_layout(**CHART_LAYOUT, height=max(250, len(df) * 22),
                       title="Kalman Z-Scores", xaxis_title="Z-Score")
     return fig
